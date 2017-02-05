@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Верстка компонентов</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <section class="components">
+        <h1 class="components__title">Верстка компонентов</h1>
+        <section class="task">
+            <h2 class="task__title">1. Рейтинг</h2>
+            <div class="star-rating">
+                <input name="star-rating" id="5-stars" type="radio">
+                <label for="5-stars"></label>
+                <input name="star-rating" id="4-stars" type="radio">
+                <label for="4-stars"></label>
+                <input name="star-rating" id="3-stars" type="radio">
+                <label for="3-stars"></label>
+                <input name="star-rating" id="2-stars" type="radio">
+                <label for="2-stars"></label>
+                <input name="star-rating" id="1-star" type="radio">
+                <label for="1-star"></label>
+            </div>
+        </section>
+        <section class="task">
+            <h2 class="task__title">2. Прогресс-бар</h2>
+            <div class="progress-bar">
+                <span class="progress-bar__completed progress-bar__completed--twenty"></span>
+                <span class="progress-bar__amount">20%</span>
+            </div>
+            <div class="progress-bar">
+                <span class="progress-bar__completed progress-bar__completed--sixty"></span>
+                <span class="progress-bar__amount">60%</span>
+            </div>
+        </section>
+        <section class="task">
+            <h2 class="task__title">3. Кнопки</h2>
+            <div class="buttons-area">
+                <a class="btn btn--link btn--small" href="#">Кнопка</a>
+                <div class="btn btn--big"><p class="btn__text">Кнопка</p></div>
+                <span class="btn btn--span btn--normal">Кнопка</span>
+
+                <!-- Этими кнопками не предусмотрена отправка данных на сервер, поэтому они не помещены в <form> -->
+                <button class="btn btn__type btn__type--small" type="button">Кнопка</button>
+                <input class="btn btn__type btn__type--normal" type="button" name="button" value="Кнопка">
+            </div>
+            <div class="buttons-area buttons-area--black">
+                <a class="btn btn--link btn--normal" href="#">Кнопка</a>
+                <div class="btn btn--normal"><p class="btn__text">Кнопка</p></div>
+                <span class="btn btn--span btn--big">Кнопка</span>
+
+                <button class="btn btn__type btn__type--normal" type="button">Кнопка</button>
+                <input class="btn btn__type btn__type--big" type="button" name="button" value="Кнопка">
+            </div>
+        </section>
+</section>
+</body>
+</html>

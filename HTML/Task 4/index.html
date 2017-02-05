@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Тестовое задание</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="main-header">
+            <nav class="navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a class="navigation__link navigation__link--purple" href="#">Личный кабинет</a></li>
+                    <li class="navigation__item"><a class="navigation__link navigation__link--green" href="#">Раздел 1</a></li>
+                    <li class="navigation__item"><a class="navigation__link navigation__link--blue" href="#">Раздел 2</a></li>
+                    <li class="navigation__item"><a class="navigation__link navigation__link--orange" href="#">Раздел 3</a></li>
+                    <li class="navigation__item"><a class="navigation__link navigation__link--grey" href="#">Раздел 4</a></li>
+                    <li class="navigation__item"><a class="navigation__link navigation__link--red" href="#">Раздел 5</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="description">
+            <article class="info-article">
+                <p class="info-article__text">&#9728;TutuRu - крупнейший сервис поиска, бронирования и покупки авиабилетов и ж/д билетов.</p>
+            </article>
+            <article class="description-article">
+                <p class="description-article__text">Наша цель проста - делать наших клиентов счастливыми, а их путешествия незабываемыми.</p>
+                <p class="description-article__text">Любое путешествие начинается с поиска подходящих билетов и бронирования гостиниц.</p>
+                <p class="description-article__text">А мы делаем это качественно, обеспечивая самую лучшую поддержку благодаря собственному контакт-центру.</p>
+            </article>
+        </section>
+        <section class="customer-info">
+            <div class="customer-info__block">
+                <h2 class="customer-info__block-title">Заполните форму</h2>
+                <ul class="customer-info__block-indication">
+                    <li class="indication__item indication__item--completed">1</li>
+                    <li class="indication__item indication__item--completed">2</li>
+                    <li class="indication__item indication__item--active">3</li>
+                    <li class="indication__item">4</li>
+                    <li class="indication__item">5</li>
+                </ul>
+            </div>
+            <p class="info-text">Общая информация</p>
+            <form class="customer-form" action="index.html" method="post">
+                <div class="customer-form__row">
+                    <div class="customer-form__block">
+                        <label class="customer-form__label" for="surname">Фамилия</label>
+                        <input class="customer-form__field" name="surname" id="surname" type="text">
+                    </div>
+                    <div class="customer-form__block">
+                        <label class="customer-form__label" for="name">Имя</label>
+                        <input class="customer-form__field" name="name" id="name" type="text">
+                    </div>
+                    <div class="customer-form__block">
+                        <label class="customer-form__label" for="patronymic">Отчество</label>
+                        <input class="customer-form__field" name="patronymic" id="patronymic" type="text">
+                    </div>
+                </div>
+                <div class="customer-form__row">
+                    <div class="customer-form__block customer-form__block--radio">
+                        <p class="customer-form__block-title">Меняли фамилию?</p>
+                        <input name="changed-surname" id="positive" type="radio" value="yes">
+                        <label class="customer-form__radio" for="positive"><span class="customer-form__radio--dotted">Да</span></label>
+                        <input name="changed-surname" id="negative" type="radio" value="no" checked>
+                        <label class="customer-form__radio" for="negative"><span class="customer-form__radio--dotted">Нет</span></label>
+                    </div>
+                    <div class="customer-form__block customer-form__block--radio">
+                        <p class="customer-form__block-title">Пол</p>
+                        <input name="sex" id="male" type="radio" value="male" checked>
+                        <label class="customer-form__radio" for="male"><span class="customer-form__radio--dotted">Муж</span></label>
+                        <input name="sex" id="female" type="radio" value="female">
+                        <label class="customer-form__radio" for="female"><span class="customer-form__radio--dotted">Жен</span></label>
+                    </div>
+                    <div class="customer-form__block">
+                        <label class="customer-form__select" for="marital-status">Семейное положение</label>
+                        <select name="marital-status" id="marital-status">
+                            <option selected>Женат / Замужем</option>
+                            <option>Не женат / Не замужем</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="customer-form__row">
+                    <div class="customer-form__block">
+                        <label class="customer-form__select" for="citizenship">Гражданство</label>
+                        <select name="citizenship" id="citizenship">
+                            <option selected>Российская Федерация</option>
+                            <option>Германия</option>
+                            <option>Франция</option>
+                            <option>Италия</option>
+                        </select>
+                    </div>
+                    <div class="customer-form__block">
+                        <label class="customer-form__select customer-form__select--birthday"><span class="select--birthday">Дата рождения</span>
+                            <div class="customer-form__select-variants">
+                                <select name="birthday-day">
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option selected>11</option>
+                                </select>
+                                <select name="birthday-month">
+                                    <option selected>июня</option>
+                                    <option>августа</option>
+                                    <option>декабря</option>
+                                </select>
+                                <select name="birthday-year">
+                                    <option>1969</option>
+                                    <option selected>1970</option>
+                                    <option>1971</option>
+                                </select>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="customer-form__row">
+                    <div class="customer-form__block customer-form__block--birthplace">
+                        <label class="customer-form__label" for="birthplace">Место рождения</label>
+                        <input class="customer-form__field" name="birthplace" id="birthplace" type="text">
+                        <p class="customer-form__mark">Например, Россия, Комсомольск-на-Амуре</p>
+                    </div>
+                </div>
+                <div class="form-buttons">
+                    <div class="button-back"><a class="btn btn--back" href="">Назад</a></div>
+                    <button class="btn btn--forward" type="submit">Далее</button>
+                </div>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
