@@ -1,7 +1,8 @@
 function parseUrl(url) {
     var a = {};
-    var searchIndexAfterProtocol = url.indexOf('://') + 3, hostPortDelim = url.indexOf(':', searchIndexAfterProtocol);
-    if (hostPortDelim > -1) {
+    var searchIndexAfterProtocol = url.indexOf('://') + 3;
+    var hostPortDelim = url.indexOf(':', searchIndexAfterProtocol);
+    if (hostPortDelim > -1) { // Проверка наличия порта
         a.port = url.substring(hostPortDelim + 1, url.indexOf('/', searchIndexAfterProtocol));
         a.hostname = url.substring(searchIndexAfterProtocol, hostPortDelim);
         a.host = a.hostname + ':' + a.port;
@@ -10,7 +11,9 @@ function parseUrl(url) {
         a.port = undefined;
         a.host = a.hostname;
     }
+    // Проверяем наличие пути
     a.pathname = url.indexOf('?') > -1 ? url.substring(url.indexOf('/', searchIndexAfterProtocol), url.indexOf('?')) : undefined;
+    // Проверяем наличие якоря
     a.hash = url.indexOf('#') > -1 ? url.substring(url.lastIndexOf('#')) : undefined;
     a.href = url;
     a.protocol = url.substring(0, url.indexOf('/'));

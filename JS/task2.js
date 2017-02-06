@@ -1,3 +1,5 @@
+/* При необходимости проверки определенных видов скобок необходимо удалить
+из массивов (openingBrackets, closingBrackets) и ассоциативного массива (brackets) ненужные */
 function checkSyntax(string) {
     var openingBrackets = ['{', '[', '(', '<'];
     var closingBrackets = ['}', ']', ')', '>'];

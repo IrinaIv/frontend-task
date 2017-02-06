@@ -23,7 +23,7 @@ try {
     test(dscount, ['-ab-аb-ab', 'a', 'b'], 2);
     test(dscount, ['aAa', 'a', 'a'], 2);
 
-    // My test
+    // Мой тест на проверку учета регистра входящих значений
     test(dscount, ['Dm__dmm__DM', 'd', 'M'], 3);
 
     console.info("Congratulations! All tests success passed.");
